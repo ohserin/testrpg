@@ -16,13 +16,16 @@ public class RpgGame {
 	public static RpgGame getInstance() {
 		return instance;
 	}
+	
 	private BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
 	private BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	
 	private boolean isRun = true;
 	
 	public void run() {
+	    GameManager.instance.init();
 		while(isRun) {
+			isRun = GameManager.instance.changeStage();
 			printMenu();
 			selectRun();
 			
