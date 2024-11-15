@@ -35,12 +35,13 @@ public class GameManager {
 	public void init() {
 		stageList.put("TITLE", new StageTitle());
 		stageList.put("LOBBY", new StageLobby());
+		stageList.put("BATTLE", new StageBattle());
 		nextStage = "TITLE";
 	}
 
 	public boolean changeStage() {
 		try {
-			writer.write("현재 스테이지 : " + curStage);
+			writer.write("🔺 : " + curStage);
 			writer.newLine();
 			writer.flush();
 		} catch (IOException e) {
@@ -48,7 +49,7 @@ public class GameManager {
 
 		}
 		try {
-			writer.write("다음 스테이지 : " + nextStage);
+			writer.write("🔻 : " + nextStage);
 			writer.newLine();
 			writer.flush();
 		} catch (IOException e) {

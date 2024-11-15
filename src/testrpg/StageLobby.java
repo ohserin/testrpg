@@ -25,6 +25,7 @@ public class StageLobby extends Stage {
 
 				if (sel == 1) {
 					GameManager.setNextStage("BATTLE");
+					GameManager.getInstance().changeStage();
 				} else if (sel == 2) {
 					GameManager.setNextStage("SETTINGS");
 				} else if (sel == 0) {
@@ -49,7 +50,7 @@ public class StageLobby extends Stage {
 
 	@Override
 	public void init() {
-		// TODO Auto-generated method stub
+		
 
 	}
 
