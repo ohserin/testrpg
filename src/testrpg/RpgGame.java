@@ -26,20 +26,20 @@ public class RpgGame {
 	    GameManager.instance.init();
 		while(isRun) {
 			isRun = GameManager.instance.changeStage();
-			printMenu();
+//			printMenu();
 			selectRun();
 			
 		}
 	}
 
-	 private void printMenu() {
-	        try {
-	            writer.write("[b]전투 [s]설정 [e]종료");
-	            writer.flush();
-	        } catch (IOException e) {
-	        	e.printStackTrace();
-	        }
-	    }
+//	 private void printMenu() {
+//	        try {
+//	            writer.write("[b]전투 [s]설정 [e]종료");
+//	            writer.flush();
+//	        } catch (IOException e) {
+//	        	e.printStackTrace();
+//	        }
+//	    }
 	 
 	 private void selectRun() {
 	        try {

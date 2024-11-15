@@ -34,12 +34,13 @@ public class GameManager {
 
 	public void init() {
 		stageList.put("TITLE", new StageTitle());
+		stageList.put("LOBBY", new StageLobby());
 		nextStage = "TITLE";
 	}
 
-	boolean changeStage() {
+	public boolean changeStage() {
 		try {
-			writer.write("curStage : " + curStage);
+			writer.write("현재 스테이지 : " + curStage);
 			writer.newLine();
 			writer.flush();
 		} catch (IOException e) {
@@ -47,7 +48,7 @@ public class GameManager {
 
 		}
 		try {
-			writer.write("nextStage : " + nextStage);
+			writer.write("다음 스테이지 : " + nextStage);
 			writer.newLine();
 			writer.flush();
 		} catch (IOException e) {
@@ -70,11 +71,8 @@ public class GameManager {
 				break;
 		}
 
-		if (nextStage.equals("")) {
-			return false;
-		} else {
-			return true;
-		}
+		return true;
+
 	}
 
 }
